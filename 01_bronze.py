@@ -75,4 +75,4 @@ else:
     print("Nothing new to load")
 
 # COMMAND ----------
-display(spark.sql(f"SELECT batch_id, count(*) AS n, sum(quality='ok') AS ok FROM {TABLE} GROUP BY batch_id ORDER BY batch_id DESC LIMIT 10"))
+display(spark.sql(f"SELECT batch_id, count(*) AS n, count_if(quality = 'ok') AS ok FROM {TABLE} GROUP BY batch_id ORDER BY batch_id DESC LIMIT 10"))
