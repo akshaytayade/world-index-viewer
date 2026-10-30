@@ -5,7 +5,7 @@
 # MAGIC and appends **only unseen batches** to `bronze_raw_quotes`, so reruns are idempotent.
 
 # COMMAND ----------
-dbutils.widgets.text("repo_path", "/Workspace/Users/<your-email>/market-map", "Git folder path")
+dbutils.widgets.text("repo_path", "/Workspace/Users/tayade_akshay@outlook.com/market-map", "Git folder path")
 dbutils.widgets.text("catalog", "workspace", "Catalog")
 dbutils.widgets.text("schema", "market_map", "Schema")
 
